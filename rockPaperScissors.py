@@ -18,16 +18,23 @@ ask.lower
 def play():
     global scoreForHuman
     global scoreForComputer
+    global scissorChance
+    global rockChance
+    global paperChance
+    global humanMost
 
     choice = input("Choose your role: a) Rock b) Paper c) Scissor [A/B/C]")
     if choice == "a":
         print("Your choice is Rock: ")
+        rockChance += 1
         print(rock)
     elif choice == "b":
         print("Your choice is Paper: ")
+        paperChance += 1
         print(paper)
     elif choice == "c":
-        print("Your choice is Scisso: ")
+        print("Your choice is Scissor: ")
+        scissorChance += 1
         print(scissor)
     else:
         print("That wasnt an option. Type again")
@@ -36,6 +43,13 @@ def play():
     role = [scissor, rock, paper]
     randomRole = random.choice(role)
     print("Computer choice is: \n" + randomRole)
+    if rockChance >= paperChance and rockChance >= scissorChance:
+        humanMost = "Rock"
+    elif paperChance >= rockChance and paperChance >= scissorChance:
+        humanMost = "Paper"
+    elif scissorChance >= paperChance and scissorChance >= rockChance:
+        humanMost = "Scissors"
+    print("\n In the next round, the human is most likely to perform (It outputs whichever option which has been used by the human the most) : " + humanMost + "\n")
 
     if (choice == "a" and randomRole == rock) or (choice == "b" and randomRole == paper) or (choice == "c" and randomRole == scissor):
         print("\nIt was a draw\n")
@@ -83,6 +97,10 @@ def play():
 
 scoreForHuman = 3
 scoreForComputer = 3
+scissorChance = 0
+rockChance = 0
+paperChance = 0
+humanMost = "test"
 
 while True:
     if ask == "a":
