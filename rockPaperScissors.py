@@ -1,3 +1,10 @@
+#Porject: Rock Paper Scissor
+#By: Mirzokhid Ganiev
+#Age: 16
+#Grade: 10 G
+#Date upon finishing: Sunday, 14th February 2021 (14/02/2021)
+#Location: Osh,  kyrgyzstan
+
 #imports
 
 import math
