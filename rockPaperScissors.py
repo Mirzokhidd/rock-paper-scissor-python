@@ -5,6 +5,15 @@
 #Date upon finishing: Sunday, 14th February 2021 (14/02/2021)
 #Location: Osh,  kyrgyzstan
 
+
+#Basic idea: 
+# The first option calculate the answer for any pythagoras question
+# The second optino works in this manner and steps: 
+# randomly chooses a side 
+# than randomly assigns values from 0-10 to the other sides
+# than asks you to answer the question
+#s tracks the score and has 10 questions
+
 #imports
 
 import math
